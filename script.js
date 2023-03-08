@@ -28,4 +28,11 @@ button.addEventListener("click", () => {
 
 const book = new Book("kentaro miyura", "berserk", "9500", "yes");
 myLibrary.push(book);
+
+const book2 = new Book("Takehiko Inoue", "Vagabond", "728", "yes");
+myLibrary.push(book2);
+
+const book3 = new Book("James Clear", "Atomic Habits", "320", "on going");
+myLibrary.push(book3);
+
 console.log(myLibrary);
