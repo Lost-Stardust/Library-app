@@ -36,3 +36,11 @@ const book3 = new Book("James Clear", "Atomic Habits", "320", "on going");
 myLibrary.push(book3);
 
 console.log(myLibrary);
+
+const content = document.querySelector(".content");
+console.log(content);
+for (i = 0; i < myLibrary.length; i++) {
+  let books = document.createElement("div");
+  books.classList.add("book");
+  content.appendChild(books);
+}
