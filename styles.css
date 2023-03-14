@@ -6,7 +6,7 @@ body {
   grid-template-rows: 1fr 2fr 2fr;
 }
 header {
-  background-color: burlywood;
+  background-image: url(https://images.unsplash.com/photo-1600181982553-ce7d36051c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
   grid-column: 1/-1;
 
   display: grid;
@@ -14,6 +14,14 @@ header {
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
+}
+.heading {
+  grid-column: 3;
+  grid-row: 1/-1;
+}
+h1 {
+  color: #c7d67c;
+  font-size: 35px;
 }
 button {
   grid-column: -2;
