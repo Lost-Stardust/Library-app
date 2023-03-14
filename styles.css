@@ -9,14 +9,18 @@ header {
   background-color: burlywood;
   grid-column: 1/-1;
 }
-.sidebar {
+/* .sidebar {
   background-color: rgb(170, 132, 106);
   grid-row: 2/-1;
-}
+
+  display: grid;
+  grid-template-rows: 0.3fr 1fr;
+  align-items: center;
+} */
 .content {
   background-color: rgb(180, 168, 137);
   grid-row: 2/-1;
-  grid-column: 2/-1;
+  grid-column: 1/-1;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
