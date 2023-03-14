@@ -39,8 +39,22 @@ console.log(myLibrary);
 
 const content = document.querySelector(".content");
 console.log(content);
-for (i = 0; i < myLibrary.length; i++) {
+// for (i = 0; i < myLibrary.length; i++) {
+//   let books = document.createElement("div");
+//   books.classList.add("book");
+//   content.appendChild(books);
+// }
+
+myLibrary.forEach((book) => {
   let books = document.createElement("div");
   books.classList.add("book");
   content.appendChild(books);
-}
+  let text = `TITLE: ${book.title} 
+  AUTHOR: ${book.author} 
+  PAGES: ${book.totalPages} 
+  READ: ${book.read}`;
+  books.textContent = text;
+});
+
+let text = `hello world`;
+console.log(text);
