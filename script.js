@@ -49,11 +49,18 @@ myLibrary.forEach((book) => {
   let books = document.createElement("div");
   books.classList.add("book");
   content.appendChild(books);
-  let text = `TITLE: ${book.title} 
-  AUTHOR: ${book.author} 
-  PAGES: ${book.totalPages} 
-  READ: ${book.read}`;
-  books.textContent = text;
+  let title = document.createElement("p");
+  let author = document.createElement("p");
+  let pages = document.createElement("p");
+  let read = document.createElement("p");
+  books.appendChild(title);
+  books.appendChild(author);
+  books.appendChild(pages);
+  books.appendChild(read);
+  title.textContent = `TITLE: ${book.title}`;
+  author.textContent = `AUTHOR: ${book.author}`;
+  pages.textContent = `PAGES: ${book.totalPages}`;
+  read.textContent = `READ: ${book.read}`;
 });
 
 let text = `hello world`;
