@@ -20,7 +20,69 @@
 
     <div id="modal">
       <h2>Enter your books' info</h2>
-      <form></form>
+      <form method="post">
+        <fieldset>
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="E.g. Berserk"
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="author">Author:</label>
+          <input
+            type="text"
+            id="author"
+            name="author"
+            placeholder="E.g. Kentaro Miyura"
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="pages">Pages:</label>
+          <input
+            type="number"
+            id="pages"
+            name="pages"
+            placeholder="E.g. 9500"
+          />
+        </fieldset>
+
+        <div class="radio">
+          <fieldset>
+            <label for="status">Status:</label>
+
+            <fieldset>
+              <label for="read">Read</label>
+              <input
+                type="radio"
+                id="read"
+                name="status"
+                value="read"
+                checked
+              />
+            </fieldset>
+
+            <fieldset>
+              <label for="not read">Not read</label>
+              <input
+                type="radio"
+                id="not-read"
+                name="status"
+                value="not-read"
+              />
+            </fieldset>
+
+            <fieldset>
+              <label for="ongoing">Ongoing</label>
+              <input type="radio" id="ongoing" name="status" value="ongoing" />
+            </fieldset>
+          </fieldset>
+        </div>
+      </form>
     </div>
     <div id="overlay"></div>
   </body>
