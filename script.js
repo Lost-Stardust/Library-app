@@ -1,9 +1,10 @@
-const button = document.querySelector("button");
+const button = document.querySelector("#openModal");
 console.log(button);
 const modal = document.querySelector("#modal");
 console.log(modal);
 const overlay = document.querySelector("#overlay");
 console.log(overlay);
+const submit = document.querySelector("#submit");
 
 let myLibrary = [
   // new book objects will be stored in this array
@@ -16,9 +17,10 @@ function Book(author, title, totalPages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
-  modal.classList.add("active");
-  overlay.classList.add("active");
+function addBookToLibrary(event) {
+  event.preventDefault();
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
 
   let author;
   let title;
@@ -30,9 +32,12 @@ function addBookToLibrary() {
   console.log(myLibrary);
 }
 
-button.addEventListener("click", () => {
-  addBookToLibrary();
+openModal.addEventListener("click", () => {
+  modal.classList.add("active");
+  overlay.classList.add("active");
 });
+
+submit.addEventListener("click", addBookToLibrary);
 
 const book = new Book("kentaro miyura", "berserk", "9500", "yes");
 myLibrary.push(book);
@@ -70,6 +75,3 @@ myLibrary.forEach((book) => {
   pages.textContent = `PAGES: ${book.totalPages}`;
   read.textContent = `READ: ${book.read}`;
 });
-
-let text = `hello world`;
-console.log(text);
