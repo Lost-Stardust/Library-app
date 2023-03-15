@@ -66,7 +66,6 @@ button:hover {
   align-items: center;
 }
 #modal {
-  padding: 30px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -97,4 +96,39 @@ button:hover {
 #overlay.active {
   pointer-events: all;
   opacity: 1;
+}
+#modal {
+  color: #c7d67c;
+}
+label {
+  font-weight: bold;
+}
+#modal {
+  display: grid;
+  grid-template-rows: 0.2fr 0.7fr;
+  justify-items: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+fieldset {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  align-items: center;
+  border: none;
+  font-size: 20px;
+  margin: 10px;
+}
+.radio fieldset {
+  display: flex;
+}
+.radio fieldset fieldset {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#modal h2 {
+  font-size: 30px;
 }
