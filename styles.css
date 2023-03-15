@@ -65,3 +65,36 @@ button:hover {
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
 }
+#modal {
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 10;
+  background-image: url(https://images.unsplash.com/photo-1610824224972-db9878a2fe2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  width: 500px;
+  height: 550px;
+  max-width: 80%;
+}
+#modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
