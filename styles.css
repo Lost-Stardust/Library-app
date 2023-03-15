@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
 body {
   margin: 0;
   height: 100vh;
   display: grid;
   grid-template-columns: 0.5fr repeat(3, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
+  font-family: "Goudy Bookletter 1911", serif;
 }
 header {
   background-image: url(https://images.unsplash.com/photo-1600181982553-ce7d36051c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
