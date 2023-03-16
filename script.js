@@ -38,7 +38,7 @@ function addBookToLibrary(event) {
     }
   }
 
-  const book = new Book(author, title, totalPages, read);
+  const book = new Book(authorValue, titleValue, pagesValue, statusValue);
   console.log(myLibrary.push(book));
   console.log(myLibrary);
 }
