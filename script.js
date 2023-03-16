@@ -1,10 +1,13 @@
+// ------ Selectors ------
 const button = document.querySelector("#openModal");
-console.log(button);
-const modal = document.querySelector("#modal");
-console.log(modal);
-const overlay = document.querySelector("#overlay");
-console.log(overlay);
 const submit = document.querySelector("#submit");
+const modal = document.querySelector("#modal");
+const overlay = document.querySelector("#overlay");
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#pages");
+const status = document.getElementsByName("status");
+console.log(status);
 
 let myLibrary = [
   // new book objects will be stored in this array
@@ -22,10 +25,10 @@ function addBookToLibrary(event) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 
-  let author;
-  let title;
-  let totalPages;
-  let read;
+  let authorValue;
+  let titleValue;
+  let pagesValue;
+  let statusValue;
 
   const book = new Book(author, title, totalPages, read);
   console.log(myLibrary.push(book));
