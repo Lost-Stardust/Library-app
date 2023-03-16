@@ -22,7 +22,10 @@ function Book(author, title, totalPages, read) {
 }
 
 function addBookToLibrary(event) {
+  // prevent the submit button's default action
+  // of sending form data to a server
   event.preventDefault();
+
   modal.classList.remove("active");
   overlay.classList.remove("active");
 
