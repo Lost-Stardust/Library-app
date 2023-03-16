@@ -1,4 +1,5 @@
 // ------ Selectors ------
+const content = document.querySelector(".content");
 const button = document.querySelector("#openModal");
 const submit = document.querySelector("#submit");
 const modal = document.querySelector("#modal");
@@ -36,14 +37,32 @@ function addBookToLibrary(event) {
   let statusValue;
   for (let i = 0; i < status.length; i++) {
     if (status[i].checked) {
-      console.log(status[i].value);
-      return;
+      statusValue = status[i].value;
+      break;
     }
   }
 
   const book = new Book(authorValue, titleValue, pagesValue, statusValue);
   console.log(myLibrary.push(book));
   console.log(myLibrary);
+
+  myLibrary.forEach((book) => {
+    let books = document.createElement("div");
+    books.classList.add("book");
+    content.appendChild(books);
+    let title = document.createElement("p");
+    let author = document.createElement("p");
+    let pages = document.createElement("p");
+    let status = document.createElement("p");
+    books.appendChild(title);
+    books.appendChild(author);
+    books.appendChild(pages);
+    books.appendChild(status);
+    title.textContent = `TITLE: ${book.title}`;
+    author.textContent = `AUTHOR: ${book.author}`;
+    pages.textContent = `PAGES: ${book.totalPages}`;
+    status.textContent = `STATUS: ${book.read}`;
+  });
 }
 
 openModal.addEventListener("click", () => {
@@ -52,40 +71,3 @@ openModal.addEventListener("click", () => {
 });
 
 submit.addEventListener("click", addBookToLibrary);
-
-const book = new Book("kentaro miyura", "berserk", "9500", "yes");
-myLibrary.push(book);
-
-const book2 = new Book("Takehiko Inoue", "Vagabond", "728", "yes");
-myLibrary.push(book2);
-
-const book3 = new Book("James Clear", "Atomic Habits", "320", "on going");
-myLibrary.push(book3);
-
-console.log(myLibrary);
-
-const content = document.querySelector(".content");
-console.log(content);
-// for (i = 0; i < myLibrary.length; i++) {
-//   let books = document.createElement("div");
-//   books.classList.add("book");
-//   content.appendChild(books);
-// }
-
-myLibrary.forEach((book) => {
-  let books = document.createElement("div");
-  books.classList.add("book");
-  content.appendChild(books);
-  let title = document.createElement("p");
-  let author = document.createElement("p");
-  let pages = document.createElement("p");
-  let status = document.createElement("p");
-  books.appendChild(title);
-  books.appendChild(author);
-  books.appendChild(pages);
-  books.appendChild(status);
-  title.textContent = `TITLE: ${book.title}`;
-  author.textContent = `AUTHOR: ${book.author}`;
-  pages.textContent = `PAGES: ${book.totalPages}`;
-  status.textContent = `STATUS: ${book.read}`;
-});
