@@ -76,13 +76,13 @@ myLibrary.forEach((book) => {
   let title = document.createElement("p");
   let author = document.createElement("p");
   let pages = document.createElement("p");
-  let read = document.createElement("p");
+  let status = document.createElement("p");
   books.appendChild(title);
   books.appendChild(author);
   books.appendChild(pages);
-  books.appendChild(read);
+  books.appendChild(status);
   title.textContent = `TITLE: ${book.title}`;
   author.textContent = `AUTHOR: ${book.author}`;
   pages.textContent = `PAGES: ${book.totalPages}`;
-  read.textContent = `READ: ${book.read}`;
+  status.textContent = `STATUS: ${book.read}`;
 });
