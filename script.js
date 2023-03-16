@@ -3,6 +3,7 @@ const button = document.querySelector("#openModal");
 const submit = document.querySelector("#submit");
 const modal = document.querySelector("#modal");
 const overlay = document.querySelector("#overlay");
+
 const title = document.querySelector("#title");
 const author = document.querySelector("#author");
 const pages = document.querySelector("#pages");
@@ -25,10 +26,17 @@ function addBookToLibrary(event) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 
-  let authorValue;
-  let titleValue;
-  let pagesValue;
+  let authorValue = author.value;
+  let titleValue = title.value;
+  let pagesValue = pages.value;
+
   let statusValue;
+  for (let i = 0; i < status.length; i++) {
+    if (status[i].checked) {
+      console.log(status[i].value);
+      return;
+    }
+  }
 
   const book = new Book(author, title, totalPages, read);
   console.log(myLibrary.push(book));
