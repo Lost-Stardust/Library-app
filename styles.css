@@ -58,16 +58,23 @@ button:hover {
   grid-column: 1/-1;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.7fr 1fr;
 }
 .book {
-  background-color: #af7649;
+  width: 300px;
+  height: 200px;
+  font-size: 14px;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
+  color: white;
+  background-image: url(https://images.unsplash.com/photo-1578845426429-c99043c4fc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
+  border-radius: 10px;
 }
 #modal {
   position: fixed;
