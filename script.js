@@ -46,7 +46,7 @@ function addBookToLibrary(event) {
   console.log(myLibrary.push(book));
   console.log(myLibrary);
 
-  myLibrary.forEach((book) => {
+  for (const book of myLibrary) {
     let books = document.createElement("div");
     books.classList.add("book");
     content.appendChild(books);
@@ -62,7 +62,7 @@ function addBookToLibrary(event) {
     author.textContent = `AUTHOR: ${book.author}`;
     pages.textContent = `PAGES: ${book.totalPages}`;
     status.textContent = `STATUS: ${book.read}`;
-  });
+  }
 }
 
 openModal.addEventListener("click", () => {
