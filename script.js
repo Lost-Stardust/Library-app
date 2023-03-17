@@ -70,4 +70,8 @@ openModal.addEventListener("click", () => {
   overlay.classList.add("active");
 });
 
+submit.addEventListener("click", () => {
+  content.textContent = "";
+});
+
 submit.addEventListener("click", addBookToLibrary);
