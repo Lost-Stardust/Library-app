@@ -58,10 +58,10 @@ function addBookToLibrary(event) {
     books.appendChild(author);
     books.appendChild(pages);
     books.appendChild(status);
-    title.textContent = `TITLE: ${book.title}`;
-    author.textContent = `AUTHOR: ${book.author}`;
-    pages.textContent = `PAGES: ${book.totalPages}`;
-    status.textContent = `STATUS: ${book.status}`;
+    title.textContent = `Title: ${book.title}`;
+    author.textContent = `Author: ${book.author}`;
+    pages.textContent = `Pages: ${book.totalPages}`;
+    status.textContent = `Status: ${book.status}`;
   }
 }
 
