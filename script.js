@@ -48,6 +48,7 @@ function addBookToLibrary(event) {
 
   for (const book of myLibrary) {
     let books = document.createElement("div");
+    books.dataset.index = myLibrary.indexOf(book);
     books.classList.add("book");
     content.appendChild(books);
     let title = document.createElement("p");
