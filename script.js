@@ -15,11 +15,11 @@ let myLibrary = [
   // new book objects will be stored in this array
 ];
 
-function Book(author, title, totalPages, read) {
+function Book(author, title, totalPages, status) {
   this.author = author;
   this.title = title;
   this.totalPages = totalPages;
-  this.read = read;
+  this.status = status;
 }
 
 function addBookToLibrary(event) {
@@ -61,7 +61,7 @@ function addBookToLibrary(event) {
     title.textContent = `TITLE: ${book.title}`;
     author.textContent = `AUTHOR: ${book.author}`;
     pages.textContent = `PAGES: ${book.totalPages}`;
-    status.textContent = `STATUS: ${book.read}`;
+    status.textContent = `STATUS: ${book.status}`;
   }
 }
 
