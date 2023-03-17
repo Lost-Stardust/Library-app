@@ -55,14 +55,17 @@ function addBookToLibrary(event) {
     let author = document.createElement("p");
     let pages = document.createElement("p");
     let status = document.createElement("p");
+    let remove = document.createElement("button");
     books.appendChild(title);
     books.appendChild(author);
     books.appendChild(pages);
     books.appendChild(status);
+    books.appendChild(remove);
     title.textContent = `Title: ${book.title}`;
     author.textContent = `Author: ${book.author}`;
     pages.textContent = `Pages: ${book.totalPages}`;
     status.textContent = `Status: ${book.status}`;
+    remove.textContent = "Remove";
   }
 }
 
