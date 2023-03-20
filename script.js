@@ -66,6 +66,12 @@ function addBookToLibrary(event) {
     pages.textContent = `Pages: ${book.totalPages}`;
     status.textContent = `Status: ${book.status}`;
     remove.textContent = "Remove";
+
+    remove.addEventListener("click", (e) => {
+      let index = e.currentTarget.parentNode.id;
+      myLibrary.splice(index, 1);
+      e.currentTarget.parentNode.remove();
+    });
   }
 }
 
