@@ -56,6 +56,9 @@ function addBookToLibrary(event) {
     let pages = document.createElement("p");
     let status = document.createElement("p");
     let remove = document.createElement("button");
+    // give remove btn a class for styling
+    remove.classList.add("remove");
+
     books.appendChild(title);
     books.appendChild(author);
     books.appendChild(pages);
