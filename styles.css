@@ -146,3 +146,17 @@ fieldset {
 #submit {
   align-self: center;
 }
+.remove {
+  font-size: 12px;
+  width: 50px;
+  height: 26px;
+  margin-left: 70px;
+}
+.toggle {
+  font-size: 12px;
+  width: 50px;
+  height: 26px;
+}
+button {
+  cursor: pointer;
+}
