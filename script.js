@@ -30,10 +30,10 @@ function addBookToLibrary(event) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 
+  // get values from the form elements
   let authorValue = author.value;
   let titleValue = title.value;
   let pagesValue = pages.value;
-
   let statusValue;
   for (let i = 0; i < status.length; i++) {
     if (status[i].checked) {
@@ -56,24 +56,35 @@ function addBookToLibrary(event) {
     let pages = document.createElement("p");
     let status = document.createElement("p");
     let remove = document.createElement("button");
-    // give remove btn a class for styling
+    let toggleStatus = document.createElement("button");
+    // give remove and toggleStatus btn a class for styling
     remove.classList.add("remove");
+    toggleStatus.classList.add("toggle");
 
     books.appendChild(title);
     books.appendChild(author);
     books.appendChild(pages);
     books.appendChild(status);
     books.appendChild(remove);
+    books.appendChild(toggleStatus);
     title.textContent = `Title: ${book.title}`;
     author.textContent = `Author: ${book.author}`;
     pages.textContent = `Pages: ${book.totalPages}`;
     status.textContent = `Status: ${book.status}`;
     remove.textContent = "Remove";
+    toggleStatus.textContent = "Status";
 
     remove.addEventListener("click", (e) => {
       let index = e.currentTarget.parentNode.id;
       myLibrary.splice(index, 1);
       e.currentTarget.parentNode.remove();
+    });
+
+    let statusArray = ["read", "not read", "ongoing"];
+    let statusIndex = 0;
+    toggleStatus.addEventListener("click", () => {
+      statusValue = statusArray[statusIndex++ % statusArray.length];
+      status.textContent = `Status: ${statusValue}`;
     });
   }
 }
