@@ -15,11 +15,13 @@ let myLibrary = [
   // new book objects will be stored in this array
 ];
 
-function Book(author, title, totalPages, status) {
-  this.author = author;
-  this.title = title;
-  this.totalPages = totalPages;
-  this.status = status;
+class Book {
+  constructor(author, title, totalPages, status) {
+    this.author = author;
+    this.title = title;
+    this.totalPages = totalPages;
+    this.status = status;
+  }
 }
 
 function addBookToLibrary(event) {
