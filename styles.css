@@ -160,3 +160,15 @@ fieldset {
 button {
   cursor: pointer;
 }
+input:valid {
+  border: none;
+  outline: solid #c2e21f 3px;
+}
+input[type="radio"]:valid,
+input[type="radio"]:invalid {
+  outline: none;
+}
+input:invalid {
+  border: none;
+  outline: solid rgb(206, 56, 56) 3px;
+}
