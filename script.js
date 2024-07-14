@@ -9,6 +9,7 @@ const title = document.querySelector("#title");
 const author = document.querySelector("#author");
 const pages = document.querySelector("#pages");
 const status = document.getElementsByName("status");
+const form = document.querySelector("form");
 console.log(status);
 
 let myLibrary = [
@@ -27,7 +28,6 @@ class Book {
 function addBookToLibrary(event) {
   // prevent the submit button's default action
   // of sending form data to a server
-  event.preventDefault();
 
   modal.classList.remove("active");
   overlay.classList.remove("active");
@@ -96,8 +96,30 @@ openModal.addEventListener("click", () => {
   overlay.classList.add("active");
 });
 
-submit.addEventListener("click", () => {
-  content.textContent = "";
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (form.reportValidity()) {
+    content.textContent = "";
+    addBookToLibrary();
+  } else {
+  }
 });
 
-submit.addEventListener("click", addBookToLibrary);
+// add client side form validation
+title.addEventListener("input", () => {
+  // console.log(title.validity);
+  if (title.validity.patternMismatch) {
+    title.setCustomValidity("Please enter only alphabets");
+  } else {
+    title.setCustomValidity("");
+  }
+});
+
+author.addEventListener("input", () => {
+  // console.log(title.validity);
+  if (author.validity.patternMismatch) {
+    author.setCustomValidity("Please enter only alphabets");
+  } else {
+    author.setCustomValidity("");
+  }
+});
